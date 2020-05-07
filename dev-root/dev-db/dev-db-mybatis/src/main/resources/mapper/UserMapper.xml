@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="db.mapper.UserMapper">
+
+    <resultMap id="user_map" type="db.entity.User">
+        <result property="accountName" column="u_account"/>
+    </resultMap>
+
+    <resultMap id="online_user_map" type="db.model.OnLineUser">
+        <result property="accountName" column="u_account"/>
+    </resultMap>
+
+    <select id="findOnlineUserInfo" parameterType="java.lang.String" resultMap="online_user_map">
+        select u.u_account from dev_user u where u.u_account=${accountName} and u.u_pwd=${password}
+    </select>
+
+    <select id="findUser" parameterType="java.lang.String" resultMap="user_map">
+        select dev_user where u_account=${accountName} and u_pwd=${password}
+    </select>
+</mapper>

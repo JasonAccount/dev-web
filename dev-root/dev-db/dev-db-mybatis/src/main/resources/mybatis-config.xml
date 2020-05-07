@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--<setting name="logImpl" value="SLF4J"/>-->
+        <setting name="cacheEnabled" value="true"/><!-- 开启二级缓存，默认true-->
+    </settings>
+
+    <!--<plugins>
+        <plugin interceptor="dev.component.plugins.PageInterceptor">
+            <property name="methodSuffix" value="ByPage"/>
+        </plugin>
+    </plugins>-->
+</configuration>

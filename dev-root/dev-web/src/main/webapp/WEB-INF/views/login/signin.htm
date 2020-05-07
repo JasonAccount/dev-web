@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>残梦网</title>
+    <style type="text/css">
+        .banner{
+            width: 100%;
+            background-color: #bfa;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" th:text="${message}">
+        welcome to our site!
+    </div>
+    <img src="/verify/verifyCode.do">
+</body>
+</html>
